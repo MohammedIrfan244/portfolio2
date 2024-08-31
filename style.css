@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color:black;
+    color: white;
+}
+header{
+    background-image: url(images/background.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+nav{
+    background-color: #D0D0D0;
+}
+ul li{
+    position: relative;
+}
+ ul li a::after{
+    content:'';
+    width: 0;
+    height: 3px;
+    background: #092327;
+    position: absolute;
+    left: 5px;
+    bottom: -6px;
+    transition: 300ms;
+}
+ul li a:hover::after{
+    width: 100%;
+}
+.visible{
+    display: none;
+}
+#brandname{
+    color: #092327;
+}
+div.offcanvas-body{
+    background-color:#D0D0D0;
+}
+a{
+    text-decoration: none;
+    color: white;
+    transition: 500ms;
+}
+a :hover{
+    transform: scale(1.05);
+}
+#home{
+    height: 90%;
+}
+footer{
+    height: 5%;
+    display: flex;
+    gap: 50px;
+    padding-left: 50px;
+}
+footer a img{
+    height: 30px;
+}
+.myname{
+    font-size: 70px;
+}
+.headSec{
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    gap: 20px;
+}
+.headings{
+    text-decoration: underline;
+    padding: 50px 0;
+    margin: 20px 0;
+}
+.mainSec{
+    padding: 10px 50px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+#education{
+    display: flex;
+    gap: 20px;
+    align-self: flex-start;
+}
+.aboutPara{
+    border: 2px solid #092327;
+    padding: 10px;
+    border-radius: 10px;
+    background-color:rgb(68, 67, 67,20%) ;
+}
+.skills{
+    height: 150px;
+    width: 150px;
+    background-color:rgb(68, 67, 67,20%);
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #092327;
+    transition: 500ms;
+}
+.project{
+    background-color:rgb(68, 67, 67,20%) ;
+    border: 2px solid #092327;
+    padding:10px;
+    border-radius: 10px;
+}
+.contact-form{
+    background-color:rgb(68, 67, 67,20%) ;
+    padding:15px 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    border: 2px solid #092327;
+}
+.form-control{
+    background-color: #092327;
+    border: 1px solid black;
+}
+.hovers{
+    transition: 500ms;
+}
+ .skills:hover{
+    background-color:rgb(131, 131, 130);
+    transform: scale(1.03);
+    cursor: pointer;
+    color: black;
+    font-weight: 400;
+ }
+ .hovers:hover{
+    background-color:rgb(131, 131, 130);
+    transform: scale(1.01);
+    cursor: pointer;
+    color: black;
+    font-weight: 400;
+ }
+ @media (max-width:900px){
+    .mainSec{
+        flex-wrap: wrap;
+    }
+    .skills{
+        height: 100px;
+        width: 100px;
+    }
+ }
+ @media(max-width:650px){
+    header{
+        background-image: url(images/BackgroundMobile.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    .myname{
+        word-wrap: break-word;
+    }
+ } 
+ @media (max-width:450px){
+    .skills{
+        height: 50px;
+        width: 150px;
+    }
+    .skills img{
+        display: none;
+    }
+    .myname{
+        font-size: 50px;
+        word-wrap: break-word;
+    }
+ }
